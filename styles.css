@@ -1,0 +1,66 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #141414;
+}
+
+[data-theme="dark"] {
+  --bg-color: #120338;
+  --text-color: #efdbff;
+}
+
+body {
+  background-color: var(--bg-color);
+  transition: .3s background-color ease;
+}
+
+h1, p {
+  transition: .3s color ease;
+  color: var(--text-color);
+}
+
+.theme-switch {
+  display: none;
+}
+
+.theme-switch + label {
+  position: relative;
+  padding-left: 65px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.theme-switch + label::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 55px;
+  border-radius: 30px;
+  background-color: #ccc;
+  margin-right: 12px;
+  transition: .4s background-color ease;
+  content: '';
+}
+
+.theme-switch + label::before {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: '';
+  transition: .4s transform ease;
+}
+
+.theme-switch:checked + label::after {
+  background-color: #ffd87f;
+}
+
+.theme-switch:checked + label::before {
+  transform: translate(25px, -50%);
+}

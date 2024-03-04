@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+
 :root {
   --bg-color: #fff;
   --text-color: #141414;
@@ -8,13 +10,42 @@
   --text-color: #efdbff;
 }
 
-body {
-  background-color: var(--bg-color);
-  transition: .3s background-color ease;
+* {
+  box-sizing: border-box;
 }
 
-h1, p {
-  transition: .3s color ease;
+body {
+  padding: 40px 0 0;
+  margin: 0;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  transition: 0.3s background-color ease;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.switch-wrapper {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1,
+p {
+  transition: 0.3s color ease;
   color: var(--text-color);
 }
 
@@ -39,8 +70,8 @@ h1, p {
   border-radius: 30px;
   background-color: #ccc;
   margin-right: 12px;
-  transition: .4s background-color ease;
-  content: '';
+  transition: 0.4s background-color ease;
+  content: "";
 }
 
 .theme-switch + label::before {
@@ -53,8 +84,8 @@ h1, p {
   width: 24px;
   border-radius: 50%;
   background-color: #fff;
-  content: '';
-  transition: .4s transform ease;
+  content: "";
+  transition: 0.4s transform ease;
 }
 
 .theme-switch:checked + label::after {
